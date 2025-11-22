@@ -177,7 +177,7 @@
       background: rgba(15, 23, 42, 1);
     }
 
-    /* PANEL PERFIL TIPO “CARD DE JUEGO” */
+    /* HERO CARD con FOTO REAL */
     .hero-card {
       border-radius: 1.25rem;
       border: 1px solid rgba(148, 163, 184, 0.5);
@@ -195,26 +195,17 @@
       margin-bottom: 1rem;
     }
 
-    .avatar {
-      width: 52px;
-      height: 52px;
-      border-radius: 0.65rem;
+    .profile-photo {
+      width: 72px;
+      height: 72px;
+      border-radius: 1rem;
       border: 2px solid #22c55e;
-      background: repeating-linear-gradient(
-          -45deg,
-          #0f172a,
-          #0f172a 4px,
-          #020617 4px,
-          #020617 8px
-        );
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 1.5rem;
+      object-fit: cover;
+      background: #020617;
     }
 
     .hero-card-title {
-      font-size: 0.95rem;
+      font-size: 0.98rem;
       font-weight: 700;
     }
 
@@ -404,6 +395,60 @@
       opacity: 0.95;
     }
 
+    /* SOBRE MÍ / EXPERIENCIA / EDUCACIÓN */
+    .about-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 2.2fr) minmax(0, 1.8fr);
+      gap: 1.5rem;
+      font-size: 0.86rem;
+    }
+
+    .about-text {
+      color: #e5e7eb;
+      line-height: 1.5;
+    }
+
+    .about-text p + p {
+      margin-top: 0.6rem;
+    }
+
+    .about-list {
+      margin-top: 0.7rem;
+      list-style: none;
+      color: #cbd5f5;
+    }
+
+    .about-list li {
+      margin-bottom: 0.25rem;
+    }
+
+    .timeline {
+      border-radius: 1rem;
+      border: 1px solid rgba(148, 163, 184, 0.6);
+      background: rgba(15, 23, 42, 0.95);
+      padding: 0.9rem 1rem;
+    }
+
+    .timeline-title {
+      font-weight: 600;
+      margin-bottom: 0.4rem;
+      font-size: 0.9rem;
+    }
+
+    .timeline-item {
+      margin-bottom: 0.5rem;
+    }
+
+    .timeline-item strong {
+      font-size: 0.82rem;
+    }
+
+    .timeline-item span {
+      font-size: 0.78rem;
+      color: #9ca3af;
+      display: block;
+    }
+
     /* PROYECTOS */
     .projects-grid {
       display: grid;
@@ -508,32 +553,7 @@
       font-size: 0.85rem;
     }
 
-    /* CONTACTO */
-    .contact-text {
-      font-size: 0.85rem;
-      color: #d1d5db;
-      margin-bottom: 0.8rem;
-    }
-
-    .contact-links {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.6rem;
-      font-size: 0.85rem;
-    }
-
-    .contact-pill {
-      padding: 0.35rem 0.7rem;
-      border-radius: 999px;
-      border: 1px solid rgba(148, 163, 184, 0.7);
-      background: rgba(15, 23, 42, 0.9);
-    }
-
-    .contact-pill strong {
-      font-weight: 600;
-    }
-
-    /* JOURNEY / ABOUT EXTRA */
+    /* JOURNEY / ABOUT GAME DEV */
     .journey-wrapper {
       display: grid;
       grid-template-columns: minmax(0, 3fr) minmax(0, 2fr);
@@ -602,6 +622,31 @@
       font-weight: 600;
     }
 
+    /* CONTACTO */
+    .contact-text {
+      font-size: 0.85rem;
+      color: #d1d5db;
+      margin-bottom: 0.8rem;
+    }
+
+    .contact-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.6rem;
+      font-size: 0.85rem;
+    }
+
+    .contact-pill {
+      padding: 0.35rem 0.7rem;
+      border-radius: 999px;
+      border: 1px solid rgba(148, 163, 184, 0.7);
+      background: rgba(15, 23, 42, 0.9);
+    }
+
+    .contact-pill strong {
+      font-weight: 600;
+    }
+
     /* FOOTER */
     footer {
       font-size: 0.75rem;
@@ -626,7 +671,8 @@
         align-items: flex-start;
       }
 
-      .journey-wrapper {
+      .journey-wrapper,
+      .about-grid {
         grid-template-columns: 1fr;
       }
     }
@@ -665,11 +711,10 @@
           </p>
 
           <div class="hero-tags">
-            <span class="tag">Angular · TypeScript</span>
-            <span class="tag">Java · Spring Boot</span>
-            <span class="tag">ASP.NET Core · C#</span>
-            <span class="tag">MySQL · PostgreSQL</span>
-            <span class="tag">Docker · CI/CD</span>
+            <span class="tag">Web Development</span>
+            <span class="tag">Full Stack</span>
+            <span class="tag">Game Dev Enthusiast</span>
+            <span class="tag">Clean Architecture</span>
           </div>
 
           <div class="hero-actions">
@@ -685,13 +730,20 @@
             >
               GitHub Profile
             </a>
+            <!-- Cambiá este link por el de tu CV real -->
+            <a
+              class="btn-ghost"
+              href="C:\Users\Santiago\Desktop\CV\BarrionuevoSantiago_DesarrolladorCV.pdf"
+            >
+              Download CV (PDF)
+            </a>
           </div>
         </div>
 
-        <!-- CARD PERFIL / ESTILO JUEGO -->
+        <!-- CARD PERFIL / ESTILO JUEGO + FOTO REAL -->
         <aside class="hero-card" aria-label="Player card">
           <div class="hero-card-header">
-            <div class="avatar">SB</div>
+            <img src="C:\Users\Santiago\Desktop\CV\WhatsApp Image 2024-05-27 at 12.03.40.jpeg" alt="Santiago Barrionuevo profile photo" class="profile-photo" />
             <div>
               <div class="hero-card-title">Santiago Barrionuevo</div>
               <div class="hero-card-sub">Full Stack · Game & Web Enthusiast</div>
@@ -726,11 +778,11 @@
             </li>
             <li>
               <span class="hero-card-dot"></span>
-              <span>Focus: clean architecture, maintainable code</span>
+              <span>Focus: clean architecture & maintainable code</span>
             </li>
             <li>
               <span class="hero-card-dot"></span>
-              <span>Bonus: strong interest in game dev & Unreal Engine</span>
+              <span>Learning path: Unreal Engine & C++</span>
             </li>
           </ul>
         </aside>
@@ -909,13 +961,13 @@
             </div>
           </article>
 
-          <!-- DEVOPS & TOOLS -->
+          <!-- DEVOPS & TOOLS + SOFT SKILLS -->
           <article class="skill-card">
             <div class="skill-card-header">
               <div class="skill-card-header-icon">🛠️</div>
               <div>
-                <div class="skill-title">DevOps & Tools</div>
-                <div class="skill-subtitle">Shipping & collaboration</div>
+                <div class="skill-title">DevOps & Soft Skills</div>
+                <div class="skill-subtitle">Shipping, teamwork & learning</div>
               </div>
             </div>
             <div class="skill-items">
@@ -923,24 +975,70 @@
                 <span class="skill-item-icon">
                   <i class="devicon-docker-plain colored"></i>
                 </span>
-                <span class="skill-item-label">Docker</span>
+                <span class="skill-item-label">Docker, basic containers</span>
               </div>
               <div class="skill-item">
                 <span class="skill-item-icon">
                   <i class="devicon-git-plain colored"></i>
                 </span>
-                <span class="skill-item-label">Git & GitHub</span>
+                <span class="skill-item-label">Git & GitHub (branching, PRs)</span>
               </div>
               <div class="skill-item">
-                <span class="skill-item-icon">🚀</span>
-                <span class="skill-item-label">CI/CD basics</span>
+                <span class="skill-item-icon">🤝</span>
+                <span class="skill-item-label">Teamwork & communication</span>
               </div>
               <div class="skill-item">
-                <span class="skill-item-icon">🎯</span>
-                <span class="skill-item-label">Clean code & refactoring mindset</span>
+                <span class="skill-item-icon">📚</span>
+                <span class="skill-item-label">Continuous learning mindset</span>
               </div>
             </div>
           </article>
+        </div>
+      </section>
+
+      <!-- ABOUT / EXPERIENCE / EDUCATION (Obligatorio de la imagen) -->
+      <section>
+        <h2 class="section-title">
+          <span></span> About · Experience · Education
+        </h2>
+
+        <div class="about-grid">
+          <div class="about-text">
+            <p>
+              I'm a Full Stack Developer focused on building web applications that are clean,
+              consistent and easy to maintain. I enjoy working across the full stack, from designing
+              APIs and data models to implementing responsive UIs with Angular.
+            </p>
+            <p>
+              Right now I'm looking for my first professional opportunity in the industry to apply
+              what I've learned, grow with a team and keep improving my skills as a developer.
+            </p>
+
+            <ul class="about-list">
+              <li>• Main stack: Angular · Java Spring Boot · ASP.NET Core · SQL</li>
+              <li>• Interested in roles mixing backend, frontend and tools for games</li>
+              <li>• Comfortable working with Git, GitHub and collaborative workflows</li>
+            </ul>
+          </div>
+
+          <aside class="timeline">
+            <div class="timeline-title">Experience & Education</div>
+
+            <div class="timeline-item">
+              <strong>Technical Degree in Programming</strong>
+              <span>Formal training in web development, OOP and databases.</span>
+            </div>
+
+            <div class="timeline-item">
+              <strong>Personal & Academic Projects</strong>
+              <span>Gave (ecommerce), BailaConmigo (events & matchmaking), utilities & demos.</span>
+            </div>
+
+            <div class="timeline-item">
+              <strong>Currently looking for my first role</strong>
+              <span>Open to internships, trainee and junior full stack positions.</span>
+            </div>
+          </aside>
         </div>
       </section>
 
@@ -1070,15 +1168,14 @@
         <div class="journey-wrapper">
           <div class="journey-text">
             <p>
-              I studied programming and started my career building full stack web applications with
+              I studied programming and started my path building full stack web applications with
               Angular, Java and ASP.NET Core. I enjoy designing APIs, modeling data and keeping the
               frontend clean and responsive.
             </p>
             <p>
-              Parallel to web development, I'm also moving into the game development world. I'm
-              especially interested in <strong>Unreal Engine</strong>, C++ and using my full stack
-              experience to create tools, dashboards and backends that support games and interactive
-              experiences.
+              In parallel, I'm exploring game development. I'm especially interested in
+              <strong>Unreal Engine</strong>, C++ and using my web background to build tools,
+              dashboards and backends that support games and interactive experiences.
             </p>
 
             <ul class="journey-list">
@@ -1092,7 +1189,7 @@
               </li>
               <li>
                 <span class="journey-dot"></span>
-                <span>Always learning: C++, Unreal Engine, and advanced design patterns.</span>
+                <span>Currently learning: C++, Unreal Engine and advanced design patterns.</span>
               </li>
             </ul>
           </div>
